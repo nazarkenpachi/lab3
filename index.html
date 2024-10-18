@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lab 3</title>
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+      .rubik-font {
+         font-family: "Rubik", sans-serif;
+         font-optical-sizing: auto;
+         font-weight: 400;
+         font-style: normal;
+      }
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: "Rubik", sans-serif;
+         overflow: hidden;
+      }
+      .top-bottom{
+         width: 100%;
+         min-height: 10vh;
+         position: fixed;
+         z-index: 1000;
+         display: flex;
+         align-items: center;
+         background: hsla(205, 46%, 10%, 1);
+         background: linear-gradient(0deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+         background: -moz-linear-gradient(0deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+         background: -webkit-linear-gradient(0deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+         filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1 );
+      }
+      #top{
+         top: 0;
+         left: 0;
+         justify-content: space-between;
+      }
+
+      nav ul{
+         display: flex;
+         height: 5vh;
+         align-items: center;
+      }
+
+      ul a {
+         font-size: 1rem;
+         font-weight: 500;
+         color: #fff;
+         text-decoration: none;
+         padding: 8px 15px;
+         transition: all 0.15s ease;
+         border-radius: 10px;
+      }
+
+      ul li {
+         padding: 10px;
+         list-style: none;
+         margin-left: 10px;
+      }
+
+      ul a:hover, #current {
+         background-color: #fff;
+         color: black;
+      }
+
+      #bottom{
+         bottom: 0;
+         left: 0;
+         justify-content: flex-end;
+      }
+
+      body{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         height: 100vh;
+         padding-top: 10vh; 
+         padding-bottom: 10vh;
+      }
+      table {
+         width: 100%;
+         background-attachment: fixed;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         position: relative;
+
+         background-image: url("https://imgur.com/0SSduAS");
+      }
+      .main{
+         flex: 1;
+         width: 100%;
+         margin: 1%;
+         aspect-ratio: 16 / 9;
+      }
+
+      .main table {
+         width: 100%;
+         height: 100%;
+         border-collapse: separate;
+         border-spacing: 10px;
+      }
+
+      .main td {
+         transition: background-color 0.3s;
+         color: #fff;
+      }
+
+      .main td:hover {
+         background-color: #FFD700;
+      }
+      .div-1 {
+         width: 25%;
+      }
+      .div-2 {
+         width: 25%;
+      }
+      .div-3 {
+         text-align: center;
+         vertical-align: middle;
+         font-size: 3.4rem;
+         font-weight: 500;
+         width: 50%;
+      }
+
+      .div-4 {
+         height: 60%;
+      }
+
+      .div-5 {
+         display: flex;
+         flex-direction: column;
+      }
+
+      .text-wrapper{
+         padding: 5px;
+         background-color: #fff;
+         border: 3px solid black;
+      }
+
+      #wr-top{
+         margin-left: 2%;
+      }
+
+      #wr-bttm{
+         margin-right: 2%;
+      }
+
+      .background-image {
+            background-image: url('https://i.imgur.com/0SSduAS.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+   </style>
+</head>
+<body class="background-image" marginheight="0" marginwidth="0" style="min-height: 100vh">
+   <header class="top-bottom" id="top">
+      <div class="text-wrapper" id="wr-top"><span>Amogus</span></div>
+      <nav>
+         <ul>
+            <li><a href="#home" id="current">Grid</a></li>
+            <li><a href="flex.html">Flex</a></li>
+            <li><a href="positioning.html">Positioning</a></li>
+         </ul>
+      </nav>
+   </header>
+   <section class="main">
+      <table>
+         <tr>
+            <td class="div-1 img-1" rowspan="4"></td>
+            <td class="div-2 " rowspan="4"> amogus </td>
+            <td class="div-3" colspan="2">Поляна стартер пак</td>
+         </tr>
+         <tr>
+            <td class="div-4 " rowspan="3"> </td>
+            <td class="div-5 " rowspan="3">  </td>
+         </tr>
+      </table>
+   </section>
+   <footer class="top-bottom" id="bottom">
+      <div class="text-wrapper" id="wr-bttm"><span>Алкоголь шкодить вашому здоров'ю</span></div>
+   </footer>
+</body>
+</html>
