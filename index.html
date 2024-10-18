@@ -17,33 +17,38 @@
          padding: 0;
          box-sizing: border-box;
          font-family: "Rubik", sans-serif;
-         overflow: hidden;
       }
-      .top-bottom{
+      body {
+         min-height: 100vh;
+         background-image: url('https://raw.githubusercontent.com/nazarkenpachi/lab3/refs/heads/main/assets/bg.jpg');
+         background-size: cover;
+         background-attachment: fixed;
+         background-position: center;
+      }
+      .main-table {
          width: 100%;
-         min-height: 10vh;
-         position: fixed;
-         z-index: 1000;
+         height: 100vh;
+         border-collapse: collapse;
+      }
+      .header, .footer {
+         height: 10vh;
+         background-color: #c6061b;
+      }
+      .content {
+         height: 80vh;
+      }
+      .top-bottom {
+         width: 100%;
          display: flex;
          align-items: center;
-         background: hsla(205, 46%, 10%, 1);
-         background: linear-gradient(0deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-         background: -moz-linear-gradient(0deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-         background: -webkit-linear-gradient(0deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-         filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1 );
       }
-      #top{
-         top: 0;
-         left: 0;
+      #top {
          justify-content: space-between;
       }
-
-      nav ul{
+      nav ul {
          display: flex;
-         height: 5vh;
          align-items: center;
       }
-
       ul a {
          font-size: 1rem;
          font-weight: 500;
@@ -53,68 +58,26 @@
          transition: all 0.15s ease;
          border-radius: 10px;
       }
-
       ul li {
          padding: 10px;
          list-style: none;
          margin-left: 10px;
       }
-
       ul a:hover, #current {
          background-color: #fff;
          color: black;
       }
-
-      #bottom{
-         bottom: 0;
-         left: 0;
-         justify-content: flex-end;
-      }
-
-      body{
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         height: 100vh;
-         padding-top: 10vh; 
-         padding-bottom: 10vh;
-      }
-      table {
-         width: 100%;
-         background-attachment: fixed;
-         background-position: center;
-         background-repeat: no-repeat;
-         background-size: cover;
-         position: relative;
-
-         background-image: url("https://imgur.com/0SSduAS");
-      }
-      .main{
-         flex: 1;
-         width: 100%;
-         margin: 1%;
-         aspect-ratio: 16 / 9;
-      }
-
-      .main table {
+      .content-table {
          width: 100%;
          height: 100%;
          border-collapse: separate;
          border-spacing: 10px;
       }
-
-      .main td {
+      .content-table td {
          transition: background-color 0.3s;
          color: #fff;
       }
-
-      .main td:hover {
-         background-color: #FFD700;
-      }
-      .div-1 {
-         width: 25%;
-      }
-      .div-2 {
+      .div-1, .div-2 {
          width: 25%;
       }
       .div-3 {
@@ -124,65 +87,68 @@
          font-weight: 500;
          width: 50%;
       }
-
       .div-4 {
-         height: 60%;
+         height: 25%;
       }
-
       .div-5 {
-         display: flex;
-         flex-direction: column;
+         height: 70%;
       }
-
-      .text-wrapper{
+      .text-wrapper {
          padding: 5px;
          background-color: #fff;
          border: 3px solid black;
       }
-
-      #wr-top{
+      #wr-top {
          margin-left: 2%;
       }
-
-      #wr-bttm{
-         margin-right: 2%;
+      #wr-bttm {
+         margin-left: 95%;
       }
-
-      .background-image {
-            background-image: url('https://i.imgur.com/0SSduAS.jpeg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
-
+      .poster-1, .poster-2, .img-1, .img-2 {
+         background-size: cover;
+         background-attachment: fixed;
+         background-position: center;
+      }
    </style>
 </head>
-<body class="background-image" marginheight="0" marginwidth="0" style="min-height: 100vh">
-   <header class="top-bottom" id="top">
-      <div class="text-wrapper" id="wr-top"><span>Amogus</span></div>
-      <nav>
-         <ul>
-            <li><a href="#home" id="current">Grid</a></li>
-            <li><a href="flex.html">Flex</a></li>
-            <li><a href="positioning.html">Positioning</a></li>
-         </ul>
-      </nav>
-   </header>
-   <section class="main">
-      <table>
-         <tr>
-            <td class="div-1 img-1" rowspan="4"></td>
-            <td class="div-2 " rowspan="4"> amogus </td>
-            <td class="div-3" colspan="2">Поляна стартер пак</td>
-         </tr>
-         <tr>
-            <td class="div-4 " rowspan="3"> </td>
-            <td class="div-5 " rowspan="3">  </td>
-         </tr>
-      </table>
-   </section>
-   <footer class="top-bottom" id="bottom">
-      <div class="text-wrapper" id="wr-bttm"><span>Алкоголь шкодить вашому здоров'ю</span></div>
-   </footer>
+<body>
+   <table class="main-table">
+      <tr class="header">
+         <td>
+            <div class="top-bottom" id="top">
+               <div class="text-wrapper" id="wr-top"><span>Amogus</span></div>
+               <nav>
+                  <ul>
+                     <li><a href="#home" id="current">Grid</a></li>
+                     <li><a href="flex.html">Flex</a></li>
+                     <li><a href="positioning.html">Positioning</a></li>
+                  </ul>
+               </nav>
+            </div>
+         </td>
+      </tr>
+      <tr class="content">
+         <td>
+            <table class="content-table">
+               <tr>
+                  <td class="div-1 img-1" rowspan="4"></td>
+                  <td class="div-2 img-2" rowspan="4"></td>
+                  <td class="div-3" colspan="2">Поляна стартер пак</td>
+               </tr>
+               <tr>
+                  <td class="div-4 poster-1" rowspan="3"> </td>
+                  <td class="div-5 poster-2" rowspan="3">  </td>
+               </tr>
+            </table>
+         </td>
+      </tr>
+      <tr class="footer">
+         <td>
+            <div class="top-bottom" id="bottom">
+               <div class="text-wrapper" id="wr-bttm"><span>Roflan</span></div>
+            </div>
+         </td>
+      </tr>
+   </table>
 </body>
 </html>
