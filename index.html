@@ -104,11 +104,34 @@
       #wr-bttm {
          margin-left: 95%;
       }
-      .poster-1, .poster-2, .img-1, .img-2 {
-         background-size: cover;
-         background-attachment: fixed;
+      .poster-1 {
+         background-image: url('https://raw.githubusercontent.com/nazarkenpachi/lab3/refs/heads/main/assets/arthur-poster.webp');
+         background-size: contain;
          background-position: center;
+         background-repeat: no-repeat;
       }
+
+      .poster-2 {
+         background-image: url('https://raw.githubusercontent.com/nazarkenpachi/lab3/refs/heads/main/assets/john-poster.webp');
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+      }
+
+      .img-1 {
+         background-image: url('https://raw.githubusercontent.com/nazarkenpachi/lab3/refs/heads/main/assets/arthur.png');
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+      }
+
+      .img-2 {
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-image: url('https://raw.githubusercontent.com/nazarkenpachi/lab3/refs/heads/main/assets/john.png');
+      }
+
    </style>
 </head>
 <body>
@@ -119,9 +142,9 @@
                <div class="text-wrapper" id="wr-top"><span>Amogus</span></div>
                <nav>
                   <ul>
-                     <li><a href="#home" id="current">Grid</a></li>
-                     <li><a href="flex.html">Flex</a></li>
-                     <li><a href="positioning.html">Positioning</a></li>
+                     <li><a href="#home" id="current">Homepage</a></li>
+                     <li><a href="#home">Doesn`t work</a></li>
+                     <li><a href="#home">Doesn`t work</a></li>
                   </ul>
                </nav>
             </div>
@@ -133,7 +156,7 @@
                <tr>
                   <td class="div-1 img-1" rowspan="4"></td>
                   <td class="div-2 img-2" rowspan="4"></td>
-                  <td class="div-3" colspan="2">Поляна стартер пак</td>
+                  <td class="div-3" colspan="2">CSS Grid is not cool</td>
                </tr>
                <tr>
                   <td class="div-4 poster-1" rowspan="3"> </td>
